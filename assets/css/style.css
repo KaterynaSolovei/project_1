@@ -167,10 +167,33 @@ template {
 }
 
 .header-content__container,
-.header-menu__container {
+.header-menu__container,
+.header-overlay__container {
   width: min(100% - 40px, 1300px);
 
   margin-inline: auto;
+}
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  min-width: 250px;
+  min-height: 60px;
+  padding: 0.5em 1em;
+
+  letter-spacing: 0.1em;
+
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  font-size: 1.125rem;
 }
 *,
 *::after,
@@ -230,7 +253,6 @@ a {
   opacity: 0.8;
   background-color: #2d3651;
 }
-
 .header-menu {
   position: absolute;
   z-index: 2;
@@ -238,35 +260,53 @@ a {
   right: 0;
   left: 0;
 
-  background-color: green;
-}
-
-.header-menu__container {
-  display: grid;
-  -webkit-box-align: center;
-  align-items: center;
-  -ms-flex-align: center;
-
-  gap: 20px;
   grid-template-columns: auto 1fr;
 }
-
-.header-navbar__bth {
-  display: none;
-}
-.header-navbar__list {
+.header-menu__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header-logo__link {
+  display: block;
+
+  letter-spacing: 0.25em;
+
+  font-size: 1.5rem;
+}
+.header-logo__accent {
+  display: inline-block;
+
+  padding: 15px 5px;
+
+  border: 3px solid #d53d27;
+}
+
+.header-navbar__list {
+  display: grid;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: end;
 
   margin: 0;
   padding: 0;
 
   list-style: none;
+  list-style: none;
+
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax 40px, -webkit-max-content);
+  grid-template-columns: repeat(auto-fill, minmax 40px, max-content);
 }
+.header-navbar__link {
+  letter-spacing: 2px;
+
+  background-color: red;
+
+  font-size: 18px;
+}
+
 .header-content {
   position: relative;
   z-index: 1;
@@ -277,8 +317,6 @@ a {
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
-
-  background-color: red;
 }
 .header-content__title {
   margin: 0 0 65px 0;

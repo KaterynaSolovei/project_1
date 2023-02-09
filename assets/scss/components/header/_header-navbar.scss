@@ -3,14 +3,21 @@
 
 .header-navbar {
 
-&__bth {
-  display: none;
-}
-&__list {
- @include unlist;
-  display: flex;
-  justify-content: flex-end;
-}
-&__item {
-}
+  &__list {
+    @include unlist;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax (40px, max-content));
+    justify-content: end;
+    gap: $gap;
+    list-style: none;
+  }
+
+  &__item {}
+
+  &__link {
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: red;
+  }
 }

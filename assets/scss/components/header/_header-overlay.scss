@@ -2,11 +2,12 @@
 @use "../../presets" as *;
 
 .header-overlay {
-@include abs-position;
+  @include abs-position;
 
-background-color: $color-primary;
-opacity: 0.8;
-}
-.header-overlay__container {
+  background-color: $color-primary;
+  opacity: 0.8;
 
+  &__container {
+    @extend %container;
+  }
 }
