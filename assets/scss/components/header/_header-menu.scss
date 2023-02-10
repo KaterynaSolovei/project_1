@@ -8,10 +8,11 @@
   left: 0;
   right: 0;
 
-  grid-template-columns: auto 1fr;
- 
   &__container {
     @extend %container;
-    display: flex;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: $gap;
   }
 }

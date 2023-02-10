@@ -2,16 +2,23 @@
 @use "../../presets" as *;
 
 .header-logo {
+  align-self: center;
+  margin-left: 20px;
  
-&__link {
-  display: block;
-font-size: 1.5rem;
-letter-spacing: 0.25em;
+
+  &__link {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
+    padding: 20px 20px 20px 0;
+
+  }
+
+  &__accent {
+    display: inline-block;
+    border: 3px solid $color-highlight;
+    padding: 14px 1px 13px 5px;
+    margin-right: -7.3px;
+  }
 }
 
-&__accent {
-  display: inline-block;
-  border: 3px solid $color-highlight;
-  padding: 15px 5px;
-} 
-}

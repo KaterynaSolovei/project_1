@@ -2,22 +2,32 @@
 @use "../../presets" as *;
 
 .header-navbar {
+  display: grid;
+  &__btn {
+    display: none;
+  }
 
   &__list {
     @include unlist;
-    
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax (40px, max-content));
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
     justify-content: end;
     gap: $gap;
-    list-style: none;
+   margin-right: 10px;
   }
 
   &__item {}
 
   &__link {
     font-size: 18px;
-    letter-spacing: 2px;
-    background-color: red;
+    letter-spacing: 0.1em;
+    padding: 20px 10px;
+    transition: color 0.25s;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }
