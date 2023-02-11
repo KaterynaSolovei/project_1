@@ -3,6 +3,7 @@
 
 .header-navbar {
   display: grid;
+
   &__btn {
     display: none;
   }
@@ -14,7 +15,7 @@
     grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
     justify-content: end;
     gap: $gap;
-   margin-right: 10px;
+    margin-right: 10px;
   }
 
   &__item {}
