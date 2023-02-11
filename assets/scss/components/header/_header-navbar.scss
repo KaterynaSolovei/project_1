@@ -2,7 +2,6 @@
 @use "../../presets" as *;
 
 .header-navbar {
-  display: grid;
 
   &__btn {
     display: none;
@@ -12,10 +11,11 @@
     @include unlist;
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(48px, max-content));
     justify-content: end;
     gap: $gap;
-    margin-right: 10px;
+    margin-right: -10px;
+ 
   }
 
   &__item {}
